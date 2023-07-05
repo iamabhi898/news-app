@@ -30,14 +30,15 @@ function Card(props) {
   const handleCheckIsSaved = () => {
     for (let item of savedArticles) {
       if (item.title === title) {
-        return setIsSaved(true);
+        setIsSaved(true);
+        break;
       }
     }
   };
 
   React.useEffect(() => {
     handleCheckIsSaved();
-  }, [isSaved, savedArticles]);
+  });
 
   return (
     <div className="cardWrapper">
