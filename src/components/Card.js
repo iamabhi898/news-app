@@ -38,7 +38,7 @@ function Card(props) {
 
   React.useEffect(() => {
     handleCheckIsSaved();
-  });
+  }, [isSaved, savedArticles]);
 
   return (
     <div className="cardWrapper">
