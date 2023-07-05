@@ -20,9 +20,11 @@ function SearchBar(props) {
 
   const handleGetSearchNews = async (searchValue) => {
     try {
-      const response = await axiosSearchGetRequest(searchValue);
-      console.log(response.data.articles);
-      dispatch(setSearchResults(response.data.articles.slice(0, 20)));
+      await axiosSearchGetRequest(searchValue)
+        .then((res) => {
+          dispatch(setSearchResults(res.data.articles.slice(0, 20)));
+        })
+        .catch((err) => console.log(err));
     } catch (error) {
       console.log(error);
     }

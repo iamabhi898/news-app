@@ -5,6 +5,7 @@ export const stateSlice = createSlice({
   initialState: {
     topStories: null,
     searchResults: [],
+    savedArticles: [],
   },
   reducers: {
     setTopStories: (state, action) => {
@@ -13,9 +14,22 @@ export const stateSlice = createSlice({
     setSearchResults: (state, action) => {
       state.searchResults = action.payload;
     },
+    addSavedArticles: (state, action) => {
+      state.savedArticles.push(action.payload);
+    },
+    removeSavedArticles: (state, action) => {
+      state.savedArticles = state.savedArticles.filter(
+        (item) => item.title !== action.payload.title
+      );
+    },
   },
 });
 
-export const { setTopStories, setSearchResults } = stateSlice.actions;
+export const {
+  setTopStories,
+  setSearchResults,
+  addSavedArticles,
+  removeSavedArticles,
+} = stateSlice.actions;
 
 export default stateSlice.reducer;
