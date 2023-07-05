@@ -4,18 +4,19 @@ import "./styles/PageLayout.css";
 import { Outlet, Link } from "react-router-dom";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 
 function PageLayout() {
   return (
     <div className="pageWrapper">
       <div className="appHeader">
+        <div></div>
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <div className="titleLogo">
             <h1>News</h1>
           </div>
         </Link>
-        <SearchBar Link={Link} />
+        {/* <SearchBar Link={Link} /> */}
         <Link to="/bookmark">
           <BookmarkBorderIcon className="bookmarkIcon" />
         </Link>

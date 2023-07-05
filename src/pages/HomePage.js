@@ -16,7 +16,8 @@ function HomePage() {
   const handleGetTopStories = async () => {
     try {
       const response = await axiosTopStoriesGetRequest();
-      dispatch(setTopStories(response.data.articles));
+      console.log(response);
+      dispatch(setTopStories(response.data));
     } catch (error) {
       console.log(error);
     }
@@ -35,12 +36,12 @@ function HomePage() {
               return (
                 <Card
                   key={idx}
-                  source={data.source.name}
-                  title={data.title}
-                  description={data.description}
-                  time={data.publishedAt}
-                  url={data.url}
-                  imageUrl={data.urlToImage}
+                  source={data.publisher.name}
+                  title={data.headline}
+                  description={data.summary}
+                  time={data.createdAt}
+                  url={data.link}
+                  imageUrl={data.imageUrl}
                 />
               );
             })
