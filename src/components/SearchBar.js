@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/SearchBar.css";
 
 // REDUX
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +16,6 @@ function SearchBar(props) {
 
   // REDUX = DISPATCHER/SELECTOR
   const dispatch = useDispatch();
-  const { searchResults } = useSelector((state) => state.globalState);
 
   const handleGetSearchNews = async (searchValue) => {
     try {

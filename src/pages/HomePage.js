@@ -24,7 +24,7 @@ function HomePage() {
 
   React.useEffect(() => {
     handleGetTopStories();
-  }, []);
+  });
 
   return (
     <div className="HomePage">
