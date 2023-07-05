@@ -3,7 +3,9 @@ import React from "react";
 function ErrorPage() {
   return (
     <div className="HomePage">
-      <h1>Sorry, something went wrong!</h1>
+      <div className="section">
+        <h2>Sorry, something went wrong!</h2>
+      </div>
     </div>
   );
 }

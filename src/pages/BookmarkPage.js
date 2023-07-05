@@ -3,7 +3,9 @@ import React from "react";
 function BookmarkPage() {
   return (
     <div className="BookmarkPage">
-      <h1>Bookmark Page</h1>
+      <div className="section">
+        <h2>Saved articles</h2>
+      </div>
     </div>
   );
 }

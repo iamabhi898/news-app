@@ -12,6 +12,7 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    position: fixed;
 }
 
 .titleLogo {
@@ -26,6 +27,21 @@
 }
 
 .bodyWrapper {
-    width: 70%;
-    background-color: pink;
+    width: 60%;
+    padding-bottom: 8rem;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .titleLogo {
+        margin-left: 0.5rem;
+    }
+
+    .bookmarkIcon {
+        margin-right: 0.5rem;
+    }
+
+    .bodyWrapper {
+        width: 90%;
+    }
 }
